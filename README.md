@@ -30,6 +30,7 @@ Client menyediakan menu untuk menggunakan lima layanan berikut dari server:
 3. Balik string
 4. Hapus huruf vokal
 5. Hitung determinan dan invers matriks 3x3
+
 Selain itu, tersedia mode otomatis (demo) untum mengiirm request secara acak ke layanan yang masih aktif.
 
 ## Perilaku
