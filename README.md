@@ -5,7 +5,7 @@ Nama:
 - Saktyaveshavatar Dharmesthabuddhi (25/566653/PA/23920)
 - Gusti Rayna (25/557884/PA/23446)
   
-## Bagian Client Aplikasi Jaringan Socket Programming
+# Bagian Client Aplikasi Jaringan Socket Programming
 Implementasi client sesuai `PROTOCOL.md` yang dibangun dengan Python standard library saja (`socket`, `json`, `random`, `math`, `sys`, `fractions`), tidak ada dependency eksternal.
 
 ## Struktur File
