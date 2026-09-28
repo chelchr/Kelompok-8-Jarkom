@@ -1,0 +1,40 @@
+import json
+
+MSG_REQUEST = "REQUEST"
+MSG_RESPONSE = "RESPONSE"
+MSG_ACK = "ACK"
+MSG_SERVICE_DISABLED_NOTICE = "SERVICE_DISABLED_NOTICE"
+MSG_SERVER_SHUTDOWN = "SERVER_SHUTDOWN"
+MSG_ERROR = "ERROR"
+
+SERVICE_COUNT_CHAR = "COUNT_CHAR"
+SERVICE_COUNT_WORD = "COUNT_WORD"
+SERVICE_REVERSE_STRING = "REVERSE_STRING"
+SERVICE_REMOVE_VOWEL = "REMOVE_VOWEL"
+SERVICE_MATRIX_DET_INV = "MATRIX_DET_INV"
+
+ALL_SERVICES = [
+    SERVICE_COUNT_CHAR,
+    SERVICE_COUNT_WORD,
+    SERVICE_REVERSE_STRING,
+    SERVICE_REMOVE_VOWEL,
+    SERVICE_MATRIX_DET_INV,
+]
+
+STATUS_OK = "OK"
+STATUS_SERVICE_DISABLED = "SERVICE_DISABLED"
+STATUS_CORRECT = "CORRECT"
+STATUS_INCORRECT = "INCORRECT"
+
+
+# satu pesan = satu baris JSON, dipisah "\n"
+def send_message(wfile, message):
+    wfile.write(json.dumps(message) + "\n")
+    wfile.flush()
+
+
+def read_message(rfile):
+    line = rfile.readline()
+    if not line:
+        return None
+    return json.loads(line)
